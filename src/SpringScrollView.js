@@ -56,7 +56,7 @@ export class SpringScrollView extends React.PureComponent<SpringScrollViewPropTy
     this._offsetY.setValue(props.initialContentOffset.y);
   }
 
-  componentWillReceiveProps(nextProps: SpringScrollViewPropType) {
+  UNSAFE_componentWillReceiveProps(nextProps: SpringScrollViewPropType) {
     if (nextProps.onNativeContentOffsetExtract !== this.props.onNativeContentOffsetExtract) {
       this.obtainScrollEvent(nextProps);
     }
